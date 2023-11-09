@@ -1,0 +1,145 @@
+.fig1{
+    position:absolute;
+    left:5%;
+    top:0%;
+}
+
+.logo{
+    width:150px;
+    height:100px;
+    cursor:pointer; 
+}
+
+.fig2{
+    position:absolute;
+    left:90%;
+    top:7%;
+}
+
+.menu{
+    text-decoration:none;
+    color:white;
+}
+
+.menu_img{
+    width:50px;
+    height:30px;
+}
+
+.fig3{
+    position:absolute;
+    left:5%;
+    top:35%;
+    width:400px;
+    color:white;
+}
+
+.links{
+    text-decoration: none;
+    color: black;
+    
+
+}
+
+.homepageLabel{
+    color:white;
+    font-size:30px;
+}
+
+
+.homepageLabelDetails{
+    color:white;
+}
+
+
+.homepageLabelWatch{
+    background:red;
+    border-radius:15px;
+    width:150px;
+    padding:3px;
+    margin-top:10px;
+}
+
+.searchButtonInput{
+    position:absolute;
+     left:35%;
+     top:8%;
+    outline:none;
+    width:350px;
+     border-radius:5px;
+     border:2px solid white;
+    background-color:transparent;
+     color:white;
+}
+
+::placeholder {
+    color: #f2f1f1; 
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+@media screen and (max-width : 768px) {
+
+    .searchButtonInput{
+    width: 200px;
+    left: 5%;
+    top: 15%;
+    }
+    
+    .fig1{
+        position:absolute;
+        left:5%;
+        top:0%;
+    }
+
+    .logo{
+        width:130px;
+        height:100px;
+        cursor:pointer; 
+    }
+    
+    .fig2{
+        position:absolute;
+        left:70%;
+        top:5%;
+    }
+
+    .menu{
+        text-decoration:none;
+        color:white;
+        font-size: 15px;
+    }
+    
+    .menu_img{
+        width:40px;
+        height:25px;
+    }
+    
+    .fig3{
+        position:absolute;
+        left:5%;
+        top:35%;
+        width:220px;
+        color:white;
+    }
+    
+    .homepageLabel{
+        color:white;
+        font-size:30px;
+    }
+    
+    
+    .homepageLabelDetails{
+        color:white;
+    }
+    
+    
+    .homepageLabelWatch{
+        background:red;
+        border-radius:15px;
+        width:150px;
+        padding:3px;
+        margin-top:10px;
+    }
+
+}

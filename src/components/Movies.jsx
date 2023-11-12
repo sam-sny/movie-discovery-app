@@ -7,6 +7,8 @@ import Movi from "../assets/Movie Projector.svg";
 import TV from "../assets/TV Show.svg";
 import Calender from "../assets/Calendar.svg";
 import LogOut from "../assets/Logout.svg";
+import Playing from "../assets/Playpng.png";
+import load from "../assets/load.gif";
 import "./Movies.css";
 
 
@@ -28,21 +30,25 @@ const Movies = () => {
     }, [id]);
 
     if (!movieDetails) {
-        return <div>Loading...</div>;
+        return <div className='position-absolute translate-middle fs-4 start-50 top-50'>
+          <img src={load} alt="load" width="100%" height="auto"/></div>;
     }
      
     //set the data and reuse in the UI e.g <div> formattedReleaseDate </div> will fetch data and render
     const releaseDate = new Date(movieDetails.release_date);
     const formattedReleaseDate = releaseDate.toISOString();
-    const poster = movieDetails.poster_path;
+    const poster = movieDetails.backdrop_path;
+    const overview = movieDetails.overview;
+    const movieTitle = movieDetails.title;
+    const release_date = movieDetails.release_date;
     
 
     return (
         // Movie Details
         <div className='d-flex'>
           <div className='w-auto'>
-{/* sidebar */}<div className='d-flex justify-content-between flex-column bg-white text-black p-1 vh-100 custom-rounded border border-right-0 border-top-0  border-bottom-0'>
-                 <div>
+{/* sidebar */}<div className='sidebar_ d-flex justify-content-between flex-column bg-white text-black p-1 vh-100 custom-rounded border'>
+                 <div className=''>
                      <a href="#">
                        <img src={Movies1} alt="movies1" style={{width:"130px", height:"70px"}}/>
                      </a>
@@ -54,10 +60,10 @@ const Movies = () => {
                        </a>
                       </li>
 
-                      <li className='nav-item p-3'>
+                      <li className='nav-item p-3 movielist'>
                        <a className="text-decoration-none" href="#">
                          <img className="me-2" src={Movi} alt="movi" style={{width:"20px", height:"25px"}}/>
-                         <span className="fs-7 text-secondary weight">Movie</span>
+                         <span className="fs-7 weight" style={{color:"#b5556d"}}>Movie</span>
                        </a>
                       </li>
 
@@ -78,12 +84,12 @@ const Movies = () => {
 
                      <div className="red-box">
                         <div className="red-box-title">
-                          Play movie quizzes and earn a free ticket
+                          Play movie quizzes and earn a free tickets
                         </div>
-                          <div className="red-box-content">
+                          <div className="red-box-content mt-1">
                             50k people are playing now
                           </div>
-                            <div className="red-box-button" >
+                            <div className="red-box-button mt-1" >
                               Start playing
                               </div>
                      </div>
@@ -102,15 +108,44 @@ const Movies = () => {
 
           </div>
 
-{/*ViewBox */}          
-          <div className='col'>
-            <div>
-           {formattedReleaseDate}
-           </div>
-           <div>
-            <img src={`https://image.tmdb.org/t/p/w500${poster}`} alt="poster" width="100px" height="100px" />
-           </div>
-          </div>
+  {/*Navigation*/}        
+          
+               <div className='col_'>
+  {/*ViewBox*/}  <div className='container-fluid'>
+                  <div className='row'>
+                   <div className='d-flex p-3 col-12'>
+                    <div className='position-relative col-12'>
+                    <img src={`https://image.tmdb.org/t/p/w500${poster}`} alt="poster" className="img-fluid" style={{width: "100%", borderRadius: "20px" ,height: "50%", objectFit: "cover"}}
+                        />
+                       <div className="center-element text-center">
+                      <img src={Playing} alt="playButton" style={{ width: "10%", height: "auto"}} />
+                      {/*<div className="watch-trailer">
+                        Watch Trailer
+    </div>*/}
+                    </div>
+                    <div className='col-12'>
+                      <div className="fw-bold_ mt-1" style={{}}>
+                      {movieTitle} · {release_date} · PG-13 · 2h10m 
+                    <span className='fw-bold_' style={{fontSize: "10px", marginLeft: "10px", 
+                    color: "#b5556d", padding: "5px", border: "1px solid #b5556d", borderRadius: "20px"}}>Action</span> 
+                      <span className='fw-bold_' style={{fontSize: "10px", marginLeft: "10px",
+                       color: "#b5556d", padding: "5px", border: "1px solid #b5556d", borderRadius: "20px"}}>Drama</span>
+
+                    <span style={{float: "right"}}>⭐ 8.5 | 350k</span>
+                      </div>
+                   </div>
+                   <div className='col-12'>
+                    <div className='fw-bold__ mt-2' style={{}}>
+                      {overview}
+                    </div>
+
+                   </div>
+                    </div> 
+                   </div>  
+                 </div> 
+              </div>
+            </div>
+          
             
         </div>
   

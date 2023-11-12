@@ -1,23 +1,107 @@
+.sidebar_ {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 160px; /* Adjust the width as needed */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+  }
+
+.col_ {
+    flex: 1;
+    margin-left: 160px;
+    overflow-y: auto;
+    padding: 0px; /* Adjust padding as needed */
+  }
+
+
 .weight{
     font-weight: 700;
 }
 
+/*.sidebar{
+    position: fixed; 
+    overflow-y: auto;
+}*/
+
+.center-element {
+    position: absolute;
+    top: 25%; /* Adjust as needed based on your requirements */
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+
+  .watch-trailer {
+    position: absolute;
+    top: calc(25% + 50px); /* Adjust the value based on your design */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 100%;
+    color: white;
+  }
+
+.movielist{
+    background-color: #faf4f6;
+    border-right:4px solid #b5556d;
+}
+
 .custom-rounded{
-    border-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 .red-box{
-   border: 1px solid ;
+   border: 1.5px solid #e0bdc6;
+   background-color: #faf4f6;
+   border-radius: 20px;
    padding: 20px;
+   width: 150px;
 }
 
 .red-box-title{
-    
+    font-size: 13px;
+    font-weight: 600;
+    color: #525050;
 }
 
 .red-box-content{
-    
+    font-size: 10px;
+    color: #746f70;
+    font-weight: 500;
 }
 
 .red-box-button{
-    
+    font-size: 10px;
+    background-color:#e0bdc6;
+    color: #b5556d;
+    font-weight: 700;
+    border-radius: 10px;
+    text-align: center;
+    padding: 4px;
 }
+
+.fw-bold__ {
+  font-size: 13px; /* Adjust the font size as needed */
+}
+
+@media (max-width: 767px) {
+    .fw-bold_ {
+      font-size: 14px; /* Adjust the font size as needed */
+    }
+    .fw-bold__ {
+      font-size: 13px; /* Adjust the font size as needed */
+    }
+  }
+  
+  /* Additional styles for other screen sizes if necessary */
+  @media (max-width: 480px) {
+    .fw-bold_ {
+      font-size: 12px; /* Adjust the font size as needed */
+    }
+    .fw-bold__ {
+      font-size: 11px; /* Adjust the font size as needed */
+    }
+  }

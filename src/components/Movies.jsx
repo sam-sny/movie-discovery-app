@@ -36,7 +36,6 @@ const Movies = () => {
      
     //set the data and reuse in the UI e.g <div> formattedReleaseDate </div> will fetch data and render
     const releaseDate = new Date(movieDetails.release_date);
-    const formattedReleaseDate = releaseDate.toISOString();
     const poster = movieDetails.backdrop_path;
     const overview = movieDetails.overview;
     const movieTitle = movieDetails.title;
@@ -54,31 +53,31 @@ const Movies = () => {
                      </a>
                      <ul className='nav nav-pills flex-column'>
                       <li className='nav-item p-3'>
-                       <a className="text-decoration-none" href="#">
+                        <span className='cursor-pointer'>
                          <img className="me-2" src={Home} alt="home" style={{width:"20px", height:"25px"}}/>
                          <span className="fs-7 text-secondary weight">Home</span>
-                       </a>
+                         </span>
                       </li>
 
                       <li className='nav-item p-3 movielist'>
-                       <a className="text-decoration-none" href="#">
-                         <img className="me-2" src={Movi} alt="movi" style={{width:"20px", height:"25px"}}/>
+                      <span className='cursor-pointer'>
+                        <img className="me-2" src={Movi} alt="movi" style={{width:"20px", height:"25px"}}/>
                          <span className="fs-7 weight" style={{color:"#b5556d"}}>Movie</span>
-                       </a>
+                       </span>
                       </li>
 
                       <li className='nav-item p-3'>
-                       <a className="text-decoration-none" href="#">
+                      <span className='cursor-pointer'>
                          <img className="me-2" src={TV} alt="tv" style={{width:"20px", height:"25px"}}/>
                          <span className="fs-7 text-secondary weight">TV Series</span>
-                       </a>
+                       </span>
                       </li>
 
                       <li className='nav-item p-3'>
-                       <a className="text-decoration-none" href="#">
+                      <span className='cursor-pointer'>
                          <img className="me-2" src={Calender} alt="cal" style={{width:"20px", height:"25px"}}/>
                          <span className="fs-7 text-secondary weight">Upcoming</span>
-                       </a>
+                      </span>
                       </li>
                      </ul>
 
@@ -96,10 +95,10 @@ const Movies = () => {
 
                      <ul className='nav nav-pills flex-column'>
                      <li className='nav-item p-3'>
-                       <a className="text-decoration-none" href="#">
+                     <span className='cursor-pointer'>
                          <img className="me-2" src={LogOut} alt="cal" style={{width:"20px", height:"25px"}}/>
                          <span className="fs-7 text-secondary weight">Log out</span>
-                       </a>
+                      </span>
                       </li>
                       </ul>
 

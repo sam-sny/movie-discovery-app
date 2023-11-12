@@ -1,3 +1,7 @@
+.cursor-pointer{
+  cursor: pointer;
+}
+
 .sidebar_ {
     position: fixed;
     top: 0;

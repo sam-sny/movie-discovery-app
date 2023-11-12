@@ -119,8 +119,8 @@ const Homepage = () => {
 
   
     <figcaption className="fig2">
-    <span><a href="#" className="menu" >Sign in
-    <img className="menu_img" src={Menu} alt="menu"/></a></span>
+    <span><p className="menu" >Sign in
+    <img className="menu_img" src={Menu} alt="menu"/></p></span>
     </figcaption>
   
     <figcaption className="fig3">

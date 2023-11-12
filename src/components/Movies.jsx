@@ -35,7 +35,7 @@ const Movies = () => {
     }
      
     //set the data and reuse in the UI e.g <div> formattedReleaseDate </div> will fetch data and render
-    const releaseDate = new Date(movieDetails.release_date);
+    
     const poster = movieDetails.backdrop_path;
     const overview = movieDetails.overview;
     const movieTitle = movieDetails.title;
@@ -48,9 +48,9 @@ const Movies = () => {
           <div className='w-auto'>
 {/* sidebar */}<div className='sidebar_ d-flex justify-content-between flex-column bg-white text-black p-1 vh-100 custom-rounded border'>
                  <div className=''>
-                     <a href="#">
-                       <img src={Movies1} alt="movies1" style={{width:"130px", height:"70px"}}/>
-                     </a>
+                     
+                       <img className='cursor-pointer' src={Movies1} alt="movies1" style={{width:"130px", height:"70px"}}/>
+                     
                      <ul className='nav nav-pills flex-column'>
                       <li className='nav-item p-3'>
                         <span className='cursor-pointer'>
@@ -88,7 +88,7 @@ const Movies = () => {
                           <div className="red-box-content mt-1">
                             50k people are playing now
                           </div>
-                            <div className="red-box-button mt-1" >
+                            <div className="red-box-button mt-1 cursor-pointer" >
                               Start playing
                               </div>
                      </div>
